@@ -20,3 +20,4 @@ B = np.array([[3, 0],[0,6]])
 print("A + B =\n", A + B)
 print("A * B =\n", A * B)
 
+
