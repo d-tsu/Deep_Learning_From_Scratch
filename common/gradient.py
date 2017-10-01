@@ -2,13 +2,15 @@ import numpy as np
 
 
 def function_2(x):
-    return np.sum(x**2)
+    return np.sum(x ** 2)
 
 
 def numerical_gradient(f, x):
+    print("numerical gradient x id:", id(x))
     h = 1e-4
     grad = np.zeros_like(x)
-
+    print("grad:", grad)
+    print(x.size)
     for idx in range(x.size):
         tmp_val = x[idx]
         # f(x+h) の計算
@@ -31,7 +33,4 @@ def gradient_descent(f, init_x, lr=0.01, step_num=100):
         grad = numerical_gradient(f, x)
         x -= lr * grad
 
-
     return x
-
-
